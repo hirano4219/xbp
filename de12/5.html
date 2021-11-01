@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>第5回</h1>
+    <h2>ゲーム作成</h2>    
+    <h3>ゲーム内容→性格診断</h3>
+    <div>
+    血液型と誕生月を入力すると、性格を診断してくれるというゲーム。   
+    </div>
+    <h4>ソースコード①</h4>
+    <code>
+        <ol start="1" style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">blood=input(<font style="color:brown;">"あなたの血液型は？"</font>)</li>
+        <li style="background-color:#EEF;">seiza=input(<font style="color:brown;">"あなたの星座は？"</font>)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">import random</li>
+        <li style="background-color:#EFF;">items=(<font style="color:brown;">"おっとり"</font>,<font style="color:brown;">"勇敢"</font>,<font style="color:brown;">"せっかち"</font>,<font style="color:brown;">"呑気"</font>,<font style="color:brown;">"穏やか"</font>,<font style="color:brown;">"生意気"</font>,<font style="color:brown;">"慎重"</font>)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">"あなたの"</font>,random.choice(items),<font style="color:brown;">"な性格です。"</font>)</li>
+        <li style="background-color:#EEF;"></li>
+        </ol></code>
+        <div>
+         簡易的なバージョン。指定したワードがランダムに抽出されるので、同じ値を入力しても同じ結果にならない。   
+        </div>
+        <h4>ソースコード②</h4>
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">a=input("あなたの血液型はA ,B ,O,ABのうちどれですか")</li>
+            <li style="background-color:#EEF;">b=int(input("あなたの誕生月は何月ですか？"))</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">if a=="A"and b==1:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "優しく控えめな"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==2:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "賢く優しい"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==3:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "勤勉で物静かな"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==4:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "とても自由な"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==5:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "頑固な"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==6:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "冷静沈着な"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==7:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "意志の強い"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==8:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "豪快な"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==9:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "活発な"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==10:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "わがままな"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==11:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "他人思いな"</li>
+            <li style="background-color:#EEF;">if a=="A"and b==12:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "おおらかな"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==1:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "謙虚な"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==2:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "人懐っこい"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==3:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "感性豊かな"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==4:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "機転のきく"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==5:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "感情表現豊かな"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==6:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "協調性のある"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==7:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "積極的な"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==8:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "自発的な"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==9:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "受容力のある"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==10:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "責任感が強い"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==11:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "計画性のある"</li>
+            <li style="background-color:#EEF;">if a=="B"and b==12:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "思いやるがある"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==1:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "負けず嫌いな"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==2:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "芯の強い"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==3:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "礼儀正しい"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==4:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "素直な"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==5:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "熱血的な"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==6:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "一貫性のある"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==7:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "誠実な"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==8:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "親切な"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==9:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "マイペースな"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==10:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "おせっかいな"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==11:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "繊細な"</li>
+            <li style="background-color:#EEF;">if a=="O"and b==12:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "社交的な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==1:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "献身的な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==2:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "控えめな"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==3:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "勇敢な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==4:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "呑気な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==5:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "頑張り屋な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==6:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "照れ屋な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==7:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "慎重な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==8:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "陽気な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==9:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "素直な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==10:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "図太い"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==11:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "無邪気な"</li>
+            <li style="background-color:#EEF;">if a=="AB"and b==12:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;seikaku = "楽観的な"</li>
+            <li style="background-color:#EEF;"></li>
+            </ol></code>
+            <div>
+            ①の改良版。入力する値によって結果が全て異なる（診断自体は適当です）。
+            </div>
+
+</body>
+</html>
