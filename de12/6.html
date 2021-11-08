@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>第6回</h1>
+    <h2>プログラミング</h2>
+    <h3>HPの更新をもっと簡単いすることはできないか</h3>
+    <div>
+    <h4>ソースコード</h4>
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">import subprocess</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">a = ['path="/Users/hirano/mygit/xbp/"',</li>
+        <li style="background-color:#EEF;">'clear',</li>
+        <li style="background-color:#EFF;">'cd $path',</li>
+        <li style="background-color:#EEF;">'echo ""',</li>
+        <li style="background-color:#EFF;">'echo $path',</li>
+        <li style="background-color:#EEF;">'git add .',</li>
+        <li style="background-color:#EFF;">'git commit -m "auto commit"',</li>
+        <li style="background-color:#EEF;">'git push']</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">subprocess.call(a, shell=True)</li>
+        <li style="background-color:#EFF;"></li>
+        </ol></code>
+     <h4>説明</h4>
+        シェルスクリプトを用いてシェルスクリプトを用いて、gitで行うHP更新のコマンドを更新のコマンドを実行する。<br>
+
+    <h4>参考にしたページ一覧</h4>
+    <a href="https://qiita.com/ego/items/3d23cda713f29f0dd141"target="_blank">忘れた時の pythonでシェルスクリプト実行</a><br>
+    <a href="https://tech.mobilefactory.jp/entry/2018/12/27/150000"target="_blank">Pythonでシェルコマンドを実行する</a><br>
+    <a href="https://qiita.com/no-use-kuro/items/cfd3b48f8e5f08c9316f"target="_blank">PythonでリモートリポジトリにCommit&Pushする最も簡単な方法</a><br>
+    </div>
+    
+    
+</body>
+</html>
