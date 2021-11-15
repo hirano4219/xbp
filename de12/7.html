@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>第7回</h1>
+    <h2>おすすめのエリア</h2>
+    <div>
+        大学生の一人暮らしということでワンルームに絞り、路線ごとの家賃と合計時間の平均をグラフにした。<br>
+        <img src="images/Figure_2.jpg"width="60%"><br>
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">import pandas as pd  # データ分析に用いるライブラリ</li>
+            <li style="background-color:#EEF;">import matplotlib.pyplot as plt  # グラフ表示に用いるライブラリ</li>
+            <li style="background-color:#EFF;">pd.set_option('display.unicode.east_asian_width', True)  # 表示のずれを少し緩和</li>
+            <li style="background-color:#EEF;">plt.rcParams['font.family'] = 'IPAexGothic'  # グラフ表示におけるフォントの指定</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">data_path = "./data.csv"</li>
+            <li style="background-color:#EFF;">df_data = pd.read_csv(data_path,  encoding="utf-8-sig")</li>
+            <li style="background-color:#EEF;">print(df_data.columns)</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">df_mean = df_data[df_data.loc[:, "間取り"] == "ワンルーム"]</li>
+            <li style="background-color:#EFF;">df_mean.groupby("路線").mean().loc[:, ["家賃", "合計時間"]].plot.bar(subplots=True,</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout=(2, 2),</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figsize=(16, 10))</li>
+            <li style="background-color:#EEF;">plt.show()</li>
+            <li style="background-color:#EFF;"></li>
+            </ol></code>
+        移動時間重視（家賃6万円以下、合計時間30分以下）であれば、東急東横線、湘南新宿ライン宇須、湘南新宿ライン高海がおすすめである（表の出し方が分かりませんでした）。<br>
+        家賃重視（家賃5万円以下、合計時間50分以下）であれば、京急逗子線、相鉄新横浜線、相鉄本線、JR埼京線がおすすめである。（こちらも表が分かりませんでした）。
+
+    </div>
+    
+    
+    
+</body>
+</html>
