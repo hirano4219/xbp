@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>第一回 </h1>
+    <h2>マイコンボード</h2>
+    <div>
+        この授業ではArduinoを使用する。<br>
+        Arduinoとは出入力ポートのあるマイコンボードで、プログラムを書いて、モーターを動かしたり、LEDを光らせたりできる。
+    </div>
+    <h3>Lチカ</h3>
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">void setup() {</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;// put your setup code here, to run once:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;pinMode(13,OUTPUT);</li>
+        <li style="background-color:#EEF;">}</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">void loop() {</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;// put your main code here, to run repeatedly:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(13,HIGH);</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;delay(500);</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(13,LOW);</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;delay(500);</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">}</li>
+        </ol></code>
+     <h3>明るさセンサーで明るさを測定</h3>
+     <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">void setup() {</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;// put your setup code here, to run once:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;Serial.begin(9600);</li>
+        <li style="background-color:#EEF;">}</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">void loop() {</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;// put your main code here, to run repeatedly:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;int val=0;</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;val=analogRead(1);</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;Serial.println(val);</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;delay(500);</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">}</li>
+        </ol></code>
+    <h3>明るさセンサーで光を操作する</h3>
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">void setup() {</li>
+        <li style="background-color:#EEF;">// put your setup code here, to run once:</li>
+        <li style="background-color:#EFF;">Serial.begin(9600);</li>
+        <li style="background-color:#EEF;">// put your setup code here, to run once:</li>
+        <li style="background-color:#EFF;">pinMode(13,OUTPUT);</li>
+        <li style="background-color:#EEF;">}</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">void loop() {</li>
+        <li style="background-color:#EFF;">// put your main code here, to run repeatedly:</li>
+        <li style="background-color:#EEF;">int val=0;</li>
+        <li style="background-color:#EFF;">val=analogRead(1);</li>
+        <li style="background-color:#EEF;">Serial.println(val);</li>
+        <li style="background-color:#EFF;">delay(500);</li>
+        <li style="background-color:#EEF;">if(val&lt;200){</li>
+        <li style="background-color:#EFF;">// もしiが200より小さかったら光らない</li>
+        <li style="background-color:#EEF;">digitalWrite(13,LOW);</li>
+        <li style="background-color:#EFF;">}else{</li>
+        <li style="background-color:#EEF;">// そうじゃなかったら光る</li>
+        <li style="background-color:#EFF;">digitalWrite(13,HIGH);</li>
+        <li style="background-color:#EEF;">}</li>
+        <li style="background-color:#EFF;">}</li>
+        <li style="background-color:#EEF;"></li>
+        </ol></code>
+    <div>
+        
+    </div>
+    <h2>次回までの課題</h2>
+    <h3>正の感情</h3>
+    <div>
+        <ul>
+            <li>課題が終わった時</li>
+            <li>ご飯を食べている時</li>
+            <li>友達といる時</li>
+            
+
+            
+        </ul> 
+
+    </div>
+    <h3>負の感情</h3>
+    <div>
+        <ul>
+            <li>怒られている時</li>
+            <li>夜眠れない時</li>
+            <li>休みの日に昼過ぎまで寝てしまった時</li>
+            
+            
+        </ul> 
+
+    </div>
+</body>
+</html>
